@@ -371,8 +371,9 @@ public class NonrtRicApiProvider implements AutoCloseable, A1ADAPTERAPIService {
     GetStatusOutputBuilder responseBuilder = new GetStatusOutputBuilder();
     if (status.isPresent()) {
         log.info("Response status.get() : {} ", status.get());
-        JSONObject statusObj = new JSONObject(status.get());
-        responseBuilder.setStatus(statusObj.getString("status"));
+        // JSONObject statusObj = new JSONObject(status.get());
+        // responseBuilder.setStatus(statusObj.getString("status"));
+        responseBuilder.setStatus(status.get());
     }
     log.info("End of getStatus");
     RpcResult<GetStatusOutput> rpcResult =

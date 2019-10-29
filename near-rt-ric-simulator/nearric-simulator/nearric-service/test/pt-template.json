@@ -1,8 +1,8 @@
 {
-  "description": "PT XXXX",
-  "name": "Policy type XXXX",
+  "description": "Policy type XXXX",
+  "name": "PT XXXX",
   "policy_type_id": XXXX,
-  "create_schema": 
+  "create_schema":
 
 
   {
@@ -11,11 +11,11 @@
     "title": "Policy type schema XXXX",
     "description": "Policy type schema for qos",
     "type": "object",
-    "properties": { 
+    "properties": {
       "policy_id": {
         "description": "Identity of the policy",
         "type": "string"},
-      "scope": { 
+      "scope": {
         "type": "object",
         "properties": {
           "ue_id": {
@@ -26,7 +26,7 @@
             "type": "string"}
         }, "required": ["ue_id", "flow_id"]
       },
-      "statement": { 
+      "statement": {
         "type": "object",
         "properties": {
           "gfbr": {
@@ -45,5 +45,4 @@
       }
     }, "required": ["policy_id", "scope", "statement"]
   }
-  
 }

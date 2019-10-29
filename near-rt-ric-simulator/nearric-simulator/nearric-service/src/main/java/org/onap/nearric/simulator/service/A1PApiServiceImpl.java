@@ -444,7 +444,7 @@ public class A1PApiServiceImpl {
 				}
 
 				return new ResponseEntity<List<InlineResponse200>>(
-						objectMapper.readValue("[ {\n  \"handler_id\" : \"X-APP-1\",\n  \"status\" : \"enforced\"\n} ]",
+						objectMapper.readValue("[ {\n  \"handler_id\" : \"NearRTRIC-1\",\n  \"status\" : \"enforced\"\n} ]",
 								List.class),
 						HttpStatus.OK);
 			} catch (IOException e) {
