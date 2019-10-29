@@ -47,7 +47,7 @@ import io.swagger.annotations.ApiParam;
 
 /**
  * This class provides all the operation performed by A1 API.
- * 
+ *
  * @author lathishbabu.ganesan@est.tech
  *
  */
@@ -78,7 +78,7 @@ public class A1PApiController implements A1PApi {
   public void reset() {
 	  a1pApiService.reset();
   }
-  
+
   public ResponseEntity<Void> a1ControllerCreateOrReplacePolicyInstance(@ApiParam(value = "",required=true) @PathVariable("policy_type_id") Integer policyTypeId,@ApiParam(value = "",required=true) @PathVariable("policy_instance_id") String policyInstanceId,@ApiParam(value = ""  )  @Valid @RequestBody Object body) {
       return a1pApiService.createReplaceInstance(policyTypeId, policyInstanceId, body);
   }
@@ -105,7 +105,7 @@ public class A1PApiController implements A1PApi {
 
   public ResponseEntity<Void> a1ControllerGetHealthcheck() {
       String accept = request.getHeader("Accept");
-      return new ResponseEntity<Void>(HttpStatus.ACCEPTED);
+      return new ResponseEntity<Void>(HttpStatus.OK);
   }
 
   public ResponseEntity<Object> a1ControllerGetPolicyInstance(@ApiParam(value = "",required=true) @PathVariable("policy_type_id") Integer policyTypeId,@ApiParam(value = "",required=true) @PathVariable("policy_instance_id") String policyInstanceId) {
